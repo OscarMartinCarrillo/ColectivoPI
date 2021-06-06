@@ -24,25 +24,5 @@ class ThemeSeeder extends Seeder
             'category_id'=>1,
             'user_id'=>3
         ]);
-        Theme::create([
-            'nombre' => "Debe de estar en el Preguntas 1",
-            'category_id'=>2,
-            'user_id'=>3
-        ]);
-        Theme::create([
-            'nombre' => "Debe de estar en el Preguntas 2",
-            'category_id'=>2,
-            'user_id'=>3
-        ]);
-        Theme::create([
-            'nombre' => "Debe de estar en el Compra/Venta 1",
-            'category_id'=>3,
-            'user_id'=>3
-        ]);
-        Theme::create([
-            'nombre' => "Debe de estar en el Compra/Venta 2",
-            'category_id'=>3,
-            'user_id'=>3
-        ]);
     }
 }
