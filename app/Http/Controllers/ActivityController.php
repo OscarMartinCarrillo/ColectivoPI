@@ -56,7 +56,6 @@ class ActivityController extends Controller
         try {
             $activity = new Activity();
             $activity->titulo = ucwords($request->titulo);
-            dd($request->conteido);
             $activity->contenido = base64_encode($request->contenido);
             $activity->lugar = $request->lugar;
             $activity->user_id=Auth::user()->id;
