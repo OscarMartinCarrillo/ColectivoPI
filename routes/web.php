@@ -16,15 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-/*
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-*/
 Route::get('/', function () {
     $activities=Activity::orderby('titulo')->paginate(3, ['*'], 'activities');
     $games=Game::orderby('nombre')->paginate(3, ['*'], 'games');
@@ -36,15 +27,7 @@ require __DIR__.'/auth.php';
 Route::resource('games', '\App\Http\Controllers\GameController');
 Route::resource('activities', '\App\Http\Controllers\ActivityController');
 Route::resource('types', '\App\Http\Controllers\TypeController');
-/*
-Route::resource('posts', '\App\Http\Controllers\PostController');
-Route::resource('categories', '\App\Http\Controllers\CategoryController');
-Route::resource('themes', '\App\Http\Controllers\ThemeController');
-//para cargar los temas pasandole el id de la categoria
-Route::get('/theme/{id}', 'App\Http\Controllers\CategoryController@indexTheme')->name('categories.indexTheme');
-//para cargar los post pasandole el id de los temas
-Route::get('post/{id}', 'App\Http\Controllers\CategoryController@indexPost')->name('categories.Posts');
-*/
+
 
 
 Route::get('/nosotros', function () {
